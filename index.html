@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Rokk3rlabsApp">
+<head>
+    <base href="/Rokk3rlabsApp/">
+    <meta charset="UTF-8">
+    <title ng-bind="$root.title + ' | Rokk3rlabsApp'">{{$root.title}}</title>
+
+    <meta charset="UTF-8">
+    <title>SchoolApp</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="assets/css/styles.css" media="all" type="text/css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+
+
+</head>
+<body>
+
+
+<header class="header">
+    <h1><a href="#">Rokk3rLabsApp</a></h1>
+</header>
+
+<nav class="nav">
+    <h3>NAVIGATE</h3>
+    <ul>
+        <li><a href="#!/dashboard" ng-class="$root.active == 'analytics' ? 'active' : ''"><i class="fa fa-line-chart"></i> Analytics</a></li>
+        <li><a href="#!/news" ng-class="$root.active == 'news' ? 'active' : ''"><i class="fa fa-newspaper-o"></i> News</a></li>
+        <li><a href="#"><i class="fa fa-file-text-o"></i> Board Brief</a></li>
+        <li><a href="#"><i class="fa fa-suitcase"></i> Briefcase</a></li>
+    </ul>
+</nav>
+
+
+
+<section class="content" ng-view></section>
+
+
+<script src="node_modules/angular/angular.js"></script>
+<script src="node_modules/angular-route/angular-route.js"></script>
+<script src="node_modules/ngstorage/ngStorage.js"></script>
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+
+<script src="app/app.js"></script>
+<script src="app/app.config.js"></script>
+<script src="app/app.cnst.js"></script>
+
+<script src="app/News/news.ctrl.js"></script>
+<script src="app/News/news.srv.js"></script>
+<script src="app/Dashboard/dashboard.ctrl.js"></script>
+<script src="app/Dashboard/dashboard.srv.js"></script>
+
+
+</body>
+</html>

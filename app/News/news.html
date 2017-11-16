@@ -1,0 +1,51 @@
+<div class="grid" ng-init="news.getNews()">
+
+    <div class="column column_4" ng-repeat="new in news.newsData">
+        <div class="card">
+            <div class="card-content">
+                <h4>{{new.category}} <span>{{new.date}}</span></h4>
+            </div>
+            <div class="card-content">
+                <h3>{{new.title}}</h3>
+            </div>
+            <img ng-if="new.imagePath!=undefined" ng-src="{{new.imagePath}}"  alt="image" width="100%">
+            <div class="card-content">
+                <p>
+                    {{new.text}}
+                </p>
+            </div>
+            <ul class="card-social">
+                <li class="text-center">
+                    <a href="#"><i class="fa fa-suitcase"></i></a>
+                </li>
+
+                <li class="text-center">
+                    <a href="#"><i class="fa fa-thumbs-o-up"></i> {{new.likes}}</a>
+                </li>
+                <li class="text-center">
+                    <a href="#"><i class="fa fa-share"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="column column_3">
+        <div class="card">
+            <h3>
+                Titulo
+                <span>Feb 22, 2016</span>
+            </h3>
+        </div>
+    </div>
+
+    <div class="column column_3">
+        <div class="card">
+            <h3>
+                Titulo
+                <span>Feb 22, 2016</span>
+            </h3>
+        </div>
+    </div>
+
+
+</div>
